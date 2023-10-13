@@ -1,0 +1,29 @@
+body {
+  border: 3px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+.cities {
+  font-weight: lighter;
+  font-size: 24px;
+  padding: 30px auto;
+  word-spacing: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+p {
+  padding: 20px auto;
+  margin: 20px auto;
+}
+
+#current-button {
+  margin: 0 auto;
+  display: block;
+}
+
+#search-button {
+  display: block;
+  margin: 0 auto;
+}
