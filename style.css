@@ -10,6 +10,7 @@ body {
   padding: 30px auto;
   word-spacing: 40px;
   margin: 0 auto;
+  display: block;
 }
 
 p {
