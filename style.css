@@ -20,3 +20,7 @@ p {
 #city:first-letter {
   text-transform: capitalize;
 }
+
+#description:first-letter {
+  text-transform: capitalize;
+}

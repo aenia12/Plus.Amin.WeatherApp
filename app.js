@@ -71,7 +71,7 @@ function convertToFahrenheit(event) {
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let temperatureElement = document.querySelector("#current-temperature");
-  let fahrenheitTemperature = (temperature * 9) / 5 + 32;
+  let fahrenheitTemperature = (temperatureElement * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature) + "°F";
 }
 function convertToCelsius(event) {
