@@ -9,23 +9,12 @@ body {
   font-size: 24px;
   padding: 30px auto;
   word-spacing: 40px;
-  margin: 0 auto;
   display: block;
 }
 
 p {
   padding: 20px auto;
   margin: 20px auto;
-}
-
-#current-button {
-  margin: 0 auto;
-  display: block;
-}
-
-#search-button {
-  display: block;
-  margin: 0 auto;
 }
 
 #city:first-letter {

@@ -1,29 +1,32 @@
-// get date
-let date = new Date();
+function formatDate(timestamp) {
+  // get date
+  let date = new Date(timestamp);
 
-let currentHour = date.getHours();
-if (currentHour > 0) {
-  currentHour = date.toTimeString().slice(0, 2);
+  let currentHour = date.getHours();
+  if (currentHour > 0) {
+    currentHour = date.toTimeString().slice(0, 2);
+  }
+  let currentMinute = date.getMinutes();
+  if (currentMinute > 0) {
+    currentMinute = date.toTimeString().slice(3, 5);
+  }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let currentDay = days[date.getDay()];
+
+  let currentDate = document.querySelector("span#currentTime");
+  currentDate.innerHTML = `${currentDay}  ${currentHour}:${currentMinute}`;
+  return `${currentDay}  ${currentHour}:${currentMinute}`;
 }
-let currentMinute = date.getMinutes();
-if (currentMinute > 0) {
-  currentMinute = date.toTimeString().slice(3, 5);
-}
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let currentDay = days[date.getDay()];
-
-let currentDate = document.querySelector("span#currentTime");
-currentDate.innerHTML = `${currentDay}  ${currentHour}:${currentMinute}`;
-
+formatDate(new Date());
 // city search
 function searchCity(event) {
   event.preventDefault();
