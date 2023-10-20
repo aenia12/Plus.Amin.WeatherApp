@@ -20,7 +20,7 @@
   </head>
   <body>
     <div class="container">
-      <span class="cities">Chicago Tokyo Madrid Istanbul London</span>
+      <span class="cities" class="float-right">Chicago Tokyo Madrid Istanbul London</span>
 
       <br />
       <form id="search-form">
@@ -47,20 +47,25 @@
           <p>
             <span id="city">Nashville, TN</span>
             <br />
-            <span id="currentTime">Thursday 17:00</span>
+            Last updated: <span id="currentTime"></span>
             <br />
-            Sunny ☀️<span id="current-temperature"> 79°F </span>
-            <a href="#" id="celsius-link">°C</a> |
-            <a href="#" id="fahrenheit-link">°F</a>
+            <span class="description"> </span> <img
+                  src="http://openweathermap.org/img/wn/01d@2x.png"
+                  alt="sunny"
+                  id="icon"
+                  class="float-left" />
+<span id="current-temperature"> 79°F </span>
+            <a href="#" class="active" id="celsius-link">°C</a> |
+            <a href="#" class="" id="fahrenheit-link">°F</a>
           </p>
         </div>
         <div class="col-6">
           <p>
             Feels like: 80°F
             <br />
-            Humidity: 45%
+            Humidity: <span class="humidity"> </span>%
             <br />
-            Wind: 10mph
+            Wind: <span class="wind">  </span>mph
           </p>
         </div>
       </div>
