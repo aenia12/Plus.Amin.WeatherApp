@@ -48,6 +48,7 @@ function showWeather(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#currentTime");
   let iconElement = document.querySelector("#icon");
+  celsiusTemperature = response.data.main.temp;
 
   weatherCity.innerHTML = temperature;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -71,7 +72,7 @@ function convertToFahrenheit(event) {
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let temperatureElement = document.querySelector("#current-temperature");
-  let fahrenheitTemperature = (temperatureElement * 9) / 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature) + "°F";
 }
 function convertToCelsius(event) {
@@ -99,6 +100,7 @@ function showCurrentLocation(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#currentTime");
   let iconElement = document.querySelector("#icon");
+  celsiusTemperature = response.data.main.temp;
 
   city.innerHTML = currentCity;
   descriptionElement.innerHTML = response.data.weather[0].description;
